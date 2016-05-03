@@ -1,0 +1,25 @@
+body{
+color: #333f33; 
+background: #e6fff2;  
+margin:10px}
+ 
+h1 {
+color:#004d26; 
+padding: 2em 1em; 
+background: #7bd1c1;
+text-align: center}
+
+h2 { 
+border-top: 1px dotted #fff; 
+margin-top: 2em} 
+  
+p {
+margin: 1em 0 }   
+ 
+table {
+text-align: center; 
+border-collapse: collapse}
+
+h1:hover {
+	color: red;
+}

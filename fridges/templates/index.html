@@ -1,0 +1,28 @@
+<DOCTYPE html>
+{% load staticfiles %}
+    <head>
+       <meta charset="utf-8">
+       <link rel = "stylesheet" type = "text/css" href = "{% static 'css/main_style.css'%}"/>
+       <link rel = "stylesheet" type = "text/css" href = "{% static 'css/table_style.css'%}"/>
+       <script type="text/javascript" src ="{% static 'js/warn.js' %}" ></script> 
+    </head>
+    <body>
+    	<h1>Система мониторинга температур и удаленного оповещения</h1>
+        {% block content%}
+        {% endblock%}
+    <!--    <script type="text/javascript" >
+        var td =  document.getElementsByTagName("td");//коллекция элементов таблицы
+   		for (var i = 0; i < td.length; i++) {
+   			var warn = td[i].innerHTML;
+				if (warn == 'Warning') {
+					td[i].style.background = '#ffb3b3';	//выделяем цветом ячеки со значением warning
+				} else {
+						//alert(warn);
+				}; 
+   		}
+			</script> -->
+    </body>
+    <script type="text/javascript" >
+    	warn();
+    </script>>
+</html>

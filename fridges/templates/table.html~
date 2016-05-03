@@ -1,0 +1,44 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+
+{% block content %}
+    <table border="1" cellpadding = "4"  width = "50%" align="center"> 
+	<caption> <b>Данные температур</b> </caption>
+	<thead>	
+		<tr> 
+			<th rowspan="2">Группа</th>
+			<th rowspan="2">ID</th>
+			<th rowspan="2">Расположение</th>
+			<th rowspan="2">Текущая t<sup>0</sup>C</th>
+			<th colspan="2">Допустимый диапазон</th>
+			<th rowspan="2">статус</th>
+		</tr>
+		<tr>
+			<td>t<sub>min</sub><sup>0</sup>C</td>
+			<td>t<sub>max</sub><sup>0</sup>C</td>
+		</tr>
+		</thead>
+		<tbody>
+{% for post in posts %}
+		<tr> 
+			<td>{{post.fridgeGroup}}</td>
+			<td>{{post.fridgesID}}</td>
+			<td>{{post.fridgeLocation}}</td>
+			<td>{{post.fridgeTemp}}</td>
+			<td>-18<sup>0</sup>C</td>
+			<td>-10<sup>0</sup>C</td>
+			<td id = "status">{{post.fridgeStatus}}</td>
+		</tr>
+{% endfor %}
+	</tbody>
+	<tfoot></tfoot>
+</table>
+{% endblock %}
+
+<script type="text/javascript" >
+   alert("я тут");
+	var warn = document.getElementById("status").InnerHTML;
+	if (warn == "Warning") {
+		document.getElementById("status").style.background = '#ffb3b3';	
+	};
+</script>

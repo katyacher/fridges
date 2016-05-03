@@ -1,0 +1,12 @@
+caption {
+padding-bottom: 10px;
+}
+table{
+}
+
+table tbody tr:nth-child(odd) {
+background-color: #ffffff;
+}
+td.warning {
+	background-color: #ffb3b3;
+}
